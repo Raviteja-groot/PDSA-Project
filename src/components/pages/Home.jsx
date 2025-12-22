@@ -279,25 +279,52 @@ function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
       </section>
 
-      {/* About Company Section */}
-      <section className="py-24 bg-white">
+      {/* About Company Section - Divided into 3 subsections */}
+      {/* Subsection 1: Title */}
+      <section className="py-12 bg-white overflow-hidden">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
               About PDSA Technologies
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
+          </div>
+        </div>
+      </section>
+
+      {/* Subsection 2: First paragraph */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-['Inter'] animate-[slideInFromLeft_1s_ease-out]">
               PDSA Technologies is a leading IT consulting firm dedicated to transforming businesses through innovative 
               technology solutions. With a team of experienced professionals and a proven track record of success, 
               we help organizations across various industries achieve their digital transformation goals.
             </p>
-            <p className="text-lg md:text-xl text-gray-500 leading-relaxed">
+          </div>
+        </div>
+      </section>
+
+      {/* Subsection 3: Second paragraph */}
+      <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-100 overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-['Inter'] animate-[slideInFromRight_1.5s_ease-out]">
               From cloud migration to AI implementation, we provide end-to-end consulting services that drive 
               growth, efficiency, and competitive advantage. Our client-centric approach ensures that every 
               solution is tailored to meet your unique business needs.
             </p>
           </div>
         </div>
+        <style jsx>{`
+          @keyframes slideInFromLeft {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+          }
+          @keyframes slideInFromRight {
+            0% { transform: translateX(100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+          }
+        `}</style>
       </section>
 
       {/* Services Section with Icons */}
@@ -316,16 +343,23 @@ function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-blue-200"
+                className="group relative bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 p-10 rounded-3xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-700 transform hover:-translate-y-4 border border-blue-100/50 hover:border-blue-300/70 backdrop-blur-sm overflow-hidden"
               >
-              <div className="flex justify-center mb-8">
-                <div className="text-blue-500 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                    {service.icon}
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-400/20 via-indigo-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm"></div>
+                <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50"></div>
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="flex justify-center mb-8">
+                    <div className="text-blue-500 group-hover:scale-125 group-hover:rotate-6 transition-all duration-700 drop-shadow-lg group-hover:drop-shadow-2xl">
+                      {service.icon}
+                    </div>
                   </div>
+                  <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mb-6 rounded-full mx-auto group-hover:w-32 group-hover:shadow-lg group-hover:shadow-blue-500/50 transition-all duration-500"></div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center group-hover:text-blue-600 transition-colors duration-300">{service.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-center group-hover:text-gray-700 transition-colors duration-300">{service.description}</p>
                 </div>
-                <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mb-6 rounded-full mx-auto group-hover:w-24 transition-all duration-300"></div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center group-hover:text-blue-600 transition-colors">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-center">{service.description}</p>
               </div>
             ))}
           </div>
@@ -364,7 +398,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 rounded-3xl p-12 text-white shadow-2xl">
+            <div className="bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-100 rounded-3xl p-12 text-gray-800 shadow-2xl border border-blue-200">
               <h3 className="text-3xl font-bold mb-8">Services Overview</h3>
               <ul className="space-y-6">
                 {[
@@ -381,7 +415,7 @@ function Home() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-lg">{item}</span>
+                    <span className="text-lg text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -391,7 +425,7 @@ function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-100 text-gray-800 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
@@ -403,7 +437,7 @@ function Home() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Why Choose Us
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               What sets us apart from the competition
             </p>
           </div>
@@ -412,11 +446,18 @@ function Home() {
             {whyChooseUs.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white/5 backdrop-blur-xl rounded-2xl p-10 text-center border border-white/10 hover:bg-white/10 hover:border-blue-500/50 transition-all duration-500 transform hover:-translate-y-2"
+                className="group relative bg-gradient-to-br from-white via-blue-50/40 to-indigo-50/60 backdrop-blur-sm rounded-3xl p-10 text-center border border-blue-200/50 hover:border-blue-400/70 transition-all duration-700 transform hover:-translate-y-6 shadow-2xl hover:shadow-blue-500/30 overflow-hidden"
               >
-                <div className="text-6xl mb-6">{feature.icon}</div>
-                <h3 className="text-2xl font-bold mb-4 text-white">{feature.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                {/* Glowing border effect */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-400/30 via-indigo-400/30 to-cyan-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm"></div>
+                <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-br from-white via-blue-50/40 to-indigo-50/60"></div>
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className="text-6xl mb-6 group-hover:scale-125 group-hover:rotate-12 transition-all duration-700 drop-shadow-lg group-hover:drop-shadow-2xl">{feature.icon}</div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{feature.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -439,21 +480,21 @@ function Home() {
           <div className="relative overflow-hidden">
             <div 
               ref={clientsRef}
-              className="flex gap-8 overflow-x-hidden scroll-smooth hide-scrollbar"
+              className="flex gap-12 overflow-x-hidden scroll-smooth hide-scrollbar"
               style={{ width: '100%' }}
             >
               {[...clients, ...clients].map((company, index) => (
-  <div key={index} className="flex-shrink-0 flex flex-col items-center justify-center w-72 h-40 bg-gradient-to-br from-gray-50 to-white rounded-xl border">
-    <img
-      src={company.logo}
-      alt={company.name}
-      
-    />
-    <span className="text-gray-800 font-semibold text-sm">
-      {company.name}
-    </span>
-  </div>
-))}
+                <div key={index} className="flex-shrink-0 flex flex-col items-center justify-center w-48 h-32 bg-gradient-to-br from-gray-50 to-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className="h-12 w-auto object-contain mb-3 filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                  <span className="text-gray-700 font-medium text-sm text-center px-2">
+                    {company.name}
+                  </span>
+                </div>
+              ))}
 
 
             </div>
@@ -552,25 +593,25 @@ function Home() {
       </section>
 
       {/* Ready to Build Something Amazing Section */}
-      <section className="py-32 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+      <section className="py-32 bg-white text-gray-800 relative overflow-hidden border-t border-gray-100">
+        <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, #e5e7eb 1px, transparent 0)`,
             backgroundSize: '50px 50px'
           }}></div>
         </div>
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-10 leading-tight">
-              <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
+              <span className="text-black">
                 Ready to Build
               </span>
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+              <span style={{color: '#1F7DC8'}}>
                 Something Amazing?
               </span>
             </h2>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto">
               Let's work together to transform your business with cutting-edge technology solutions. 
               Get in touch with our team today and take the first step towards digital transformation.
             </p>
@@ -584,7 +625,7 @@ function Home() {
               </a>
               <a
                 href="/service"
-                className="bg-white/10 backdrop-blur-xl text-white px-12 py-6 rounded-full hover:bg-white/20 transition-all duration-300 inline-block font-semibold text-lg border-2 border-white/30 hover:border-white/50"
+                className="bg-gray-100 text-gray-800 px-12 py-6 rounded-full hover:bg-gray-200 transition-all duration-300 inline-block font-semibold text-lg border-2 border-gray-200 hover:border-gray-300"
               >
                 Explore Our Services
               </a>

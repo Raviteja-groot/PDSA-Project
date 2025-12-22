@@ -3,30 +3,30 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer className="bg-slate-900 text-gray-300">
+    <footer className="bg-white text-gray-700 border-t border-gray-200">
       <div className="container mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Explore Section */}
           <div>
-            <h3 className="text-white text-lg font-bold mb-6">Explore</h3>
+            <h3 className="text-gray-900 text-lg font-bold mb-6">Explore</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/service" className="hover:text-blue-400 transition-colors duration-200">
+                <Link to="/service" className="hover:text-blue-600 transition-colors duration-200">
                   Service
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-blue-400 transition-colors duration-200">
+                <Link to="/about" className="hover:text-blue-600 transition-colors duration-200">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/career" className="hover:text-blue-400 transition-colors duration-200">
+                <Link to="/career" className="hover:text-blue-600 transition-colors duration-200">
                   Career
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-blue-400 transition-colors duration-200">
+                <Link to="/contact" className="hover:text-blue-600 transition-colors duration-200">
                   Contact
                 </Link>
               </li>
@@ -35,7 +35,7 @@ function Footer() {
 
           {/* Technology Section */}
           <div>
-            <h3 className="text-white text-lg font-bold mb-6">Technology</h3>
+            <h3 className="text-gray-900 text-lg font-bold mb-6">Technology</h3>
             <div className="grid grid-cols-2 gap-2">
               <ul className="space-y-3">
                 <li>
@@ -111,7 +111,7 @@ function Footer() {
 
           {/* Industry Section */}
           <div>
-            <h3 className="text-white text-lg font-bold mb-6">Industry</h3>
+            <h3 className="text-gray-900 text-lg font-bold mb-6">Industry</h3>
             <div className="grid grid-cols-1 gap-2">
               <ul className="space-y-3">
                 <li>
@@ -164,7 +164,7 @@ function Footer() {
           <div className="space-y-8">
             {/* Headquarters */}
             <div>
-              <h3 className="text-white text-lg font-bold mb-4">
+              <h3 className="text-gray-900 text-lg font-bold mb-4">
                 PDSA Technologies Headquarter
               </h3>
               <address className="not-italic space-y-2 text-sm">
@@ -198,7 +198,7 @@ function Footer() {
 
             {/* Development Center */}
             <div>
-              <h3 className="text-white text-lg font-bold mb-4">
+              <h3 className="text-gray-900 text-lg font-bold mb-4">
                 PDSA Technologies Development Center
               </h3>
               <address className="not-italic space-y-2 text-sm">
@@ -235,21 +235,34 @@ function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-8 mt-8">
+        <div className="border-t border-gray-200 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm mb-4 md:mb-0 text-gray-400">
-              © {new Date().getFullYear()} PDSA Technologies Inc. All rights reserved.
+            <p className="text-sm mb-4 md:mb-0 text-gray-500">
+              <span className="inline-block animate-[fadeInUp_0.5s_ease-out]">&copy;</span>
+              <span className="inline-block animate-[fadeInUp_0.7s_ease-out]">&nbsp;{new Date().getFullYear()}</span>
+              <span className="inline-block animate-[fadeInUp_0.9s_ease-out]">&nbsp;PDSA</span>
+              <span className="inline-block animate-[fadeInUp_1.1s_ease-out]">&nbsp;Technologies</span>
+              <span className="inline-block animate-[fadeInUp_1.3s_ease-out]">&nbsp;Inc.</span>
+              <span className="inline-block animate-[fadeInUp_1.5s_ease-out]">&nbsp;All</span>
+              <span className="inline-block animate-[fadeInUp_1.7s_ease-out]">&nbsp;rights</span>
+              <span className="inline-block animate-[fadeInUp_1.9s_ease-out]">&nbsp;reserved.</span>
             </p>
             <div className="flex space-x-6">
-              <Link to="/privacy" className="text-sm hover:text-blue-400 transition-colors duration-200">
+              <Link to="/privacy" className="text-sm hover:text-blue-600 transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-sm hover:text-blue-400 transition-colors duration-200">
+              <Link to="/terms" className="text-sm hover:text-blue-600 transition-colors duration-200">
                 Terms of Service
               </Link>
             </div>
           </div>
         </div>
+        <style jsx>{`
+          @keyframes fadeInUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+          }
+        `}</style>
       </div>
     </footer>
   );

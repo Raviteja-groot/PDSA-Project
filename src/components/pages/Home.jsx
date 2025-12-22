@@ -3,8 +3,27 @@ import { AIIcon, CloudIcon, DevOpsIcon, BigDataIcon, WebDevIcon, IoTIcon } from 
 import Lottie from "lottie-react";
 import heroAnimation from "../../assets/lottie/hero3d.json";
 import Snowfall from "react-snowfall";
+import infosysLogo from "../../assets/logos/infosys.png";
+import walmartLogo from "../../assets/logos/walmart.png";
+import boaLogo from "../../assets/logos/bankofamerica.png";
+import metaLogo from "../../assets/logos/meta.png";
+import atosLogo from "../../assets/logos/atos.png";
+import humanaLogo from "../../assets/logos/humana.png";
+import capitalOneLogo from "../../assets/logos/capitalone.png";
+import appleLogo from "../../assets/logos/apple.png";
 
 const colors = ["#8AA7C4", "#2E98DA", "#C2CFDE", "#FEFEFE", "#0E6AB6"];
+const clients = [
+  { name: "Infosys", logo: infosysLogo },
+{ name: "Walmart", logo: walmartLogo },
+{ name: "Bank of America", logo: boaLogo },
+{ name: "Meta", logo: metaLogo },
+{ name: "ATOS", logo: atosLogo },
+{ name: "Humana", logo: humanaLogo },
+{ name: "Capital One", logo: capitalOneLogo },
+{ name: "Apple", logo: appleLogo },
+];
+
 
 function Home() {
   const [showSnow, setShowSnow] = useState(true);
@@ -53,17 +72,7 @@ function Home() {
   ];
 
   // Client logos
-  const clients = [
-    'Infosys',
-    'Walmart',
-    'Bank of America',
-    'Meta',
-    'ATOS',
-    'Humana',
-    'Capital One',
-    'Apple',
-  ];
-
+  
   // Services with icons
   const services = [
     {
@@ -413,6 +422,7 @@ function Home() {
           </div>
         </div>
       </section>
+      
 
       {/* Clients Sliding Section */}
       <section className="py-24 bg-white overflow-hidden">
@@ -432,14 +442,20 @@ function Home() {
               className="flex gap-8 overflow-x-hidden scroll-smooth hide-scrollbar"
               style={{ width: '100%' }}
             >
-              {[...clients, ...clients].map((client, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 flex items-center justify-center w-72 h-40 bg-gradient-to-br from-gray-50 to-white rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-100 hover:border-blue-200"
-                >
-                  <span className="text-gray-800 font-bold text-xl">{client}</span>
-                </div>
-              ))}
+              {[...clients, ...clients].map((company, index) => (
+  <div key={index} className="flex-shrink-0 flex flex-col items-center justify-center w-72 h-40 bg-gradient-to-br from-gray-50 to-white rounded-xl border">
+    <img
+      src={company.logo}
+      alt={company.name}
+      
+    />
+    <span className="text-gray-800 font-semibold text-sm">
+      {company.name}
+    </span>
+  </div>
+))}
+
+
             </div>
           </div>
         </div>

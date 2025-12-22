@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { AIIcon, CloudIcon, DevOpsIcon, BigDataIcon, WebDevIcon, IoTIcon } from '../icons/ServiceIcons';
+import Lottie from "lottie-react";
+import heroAnimation from "../../assets/lottie/hero3d.json";
 import Snowfall from "react-snowfall";
 
 const colors = ["#8AA7C4", "#2E98DA", "#C2CFDE", "#FEFEFE", "#0E6AB6"];
@@ -166,6 +168,24 @@ function Home() {
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900">
         {/* Animated Background Pattern */}
+        {/* Left side 3D animation */}
+<div className="absolute left-10 bottom-10 md:left-24 md:bottom-24 w-[260px] md:w-[420px] opacity-60 z-10 pointer-events-none scale-x-[-1]">
+  <Lottie
+    animationData={heroAnimation}
+    loop
+    autoplay
+  />
+</div>
+
+        {/* 3D Lottie Animation – Decorative */}
+<div className="absolute right-10 bottom-10 md:right-24 md:bottom-24 w-[260px] md:w-[420px] opacity-80 z-10 pointer-events-none">
+  <Lottie
+    animationData={heroAnimation}
+    loop
+    autoplay
+  />
+</div>
+
         {/* Snow Effect */}
         <div className="fixed inset-0 pointer-events-none z-0">
         {showSnow && (

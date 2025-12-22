@@ -1,7 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { AIIcon, CloudIcon, DevOpsIcon, BigDataIcon, WebDevIcon, IoTIcon } from '../icons/ServiceIcons';
+import Snowfall from "react-snowfall";
+
+const colors = ["#8AA7C4", "#2E98DA", "#C2CFDE", "#FEFEFE", "#0E6AB6"];
 
 function Home() {
+  const [showSnow, setShowSnow] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSnow(false);
+    }, 10000); // ⏱ CHANGE TIME HERE
+
+    return () => clearTimeout(timer);
+  }, []);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const clientsRef = useRef(null);
 
@@ -152,8 +163,25 @@ function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Premium Design */}
+
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900">
         {/* Animated Background Pattern */}
+        {/* Snow Effect */}
+        <div className="fixed inset-0 pointer-events-none z-0">
+        {showSnow && (
+  <Snowfall
+    color={colors[Math.floor(Math.random() * colors.length)]}
+    snowflakeCount={200}
+    style={{
+      position: "fixed",
+      width: "100vw",
+      height: "100vh",
+      zIndex: 40, // Tailwind-friendly layering
+    }}
+  />
+)}
+
+      </div>
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
@@ -177,7 +205,7 @@ function Home() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-8 leading-tight">
+            <h1 className="font-[Poppins] text-6xl font-extrabold tracking-tight">
               <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
                 Transform your
               </span>

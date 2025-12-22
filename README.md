@@ -1,4 +1,4 @@
-# TetraX AI Website Clone
+
 
 A full-stack clone of the TetraX AI website with React frontend and Node.js/Express backend.
 

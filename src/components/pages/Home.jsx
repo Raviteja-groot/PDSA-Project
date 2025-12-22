@@ -5,7 +5,7 @@ import heroAnimation from "../../assets/lottie/hero3d.json";
 import Snowfall from "react-snowfall";
 import infosysLogo from "../../assets/logos/infosys.png";
 import walmartLogo from "../../assets/logos/walmart.png";
-import boaLogo from "../../assets/logos/bankofamerica.png";
+import boaLogo from "../../assets/logos/BankofAmerica.png";
 import metaLogo from "../../assets/logos/meta.png";
 import atosLogo from "../../assets/logos/atos.png";
 import humanaLogo from "../../assets/logos/humana.png";

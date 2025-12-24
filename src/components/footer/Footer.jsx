@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer className="bg-white text-gray-700 border-t border-gray-200">
+    <footer className="bg-white text-gray-700 border-t-8 border-b-8 border-[#1e3a8a]">
       <div className="container mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Explore Section */}
@@ -257,7 +257,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <style jsx>{`
+        <style>{`
           @keyframes fadeInUp {
             0% { transform: translateY(20px); opacity: 0; }
             100% { transform: translateY(0); opacity: 1; }

@@ -1,36 +1,67 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Service() {
   const services = [
     {
-      title: 'AI & Machine Learning',
-      description: 'Harness the power of artificial intelligence to automate processes, gain insights, and create intelligent solutions that drive business value.',
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      title: 'Banking and Financial Service',
+      description: 'Comprehensive financial technology solutions to help banks and financial institutions modernize their operations and enhance customer experience.',
+      features: ['Digital Banking Solutions', 'Risk Management Systems', 'Compliance & Regulatory', 'Payment Processing'],
+      link: '/services/banking-financial'
     },
     {
-      title: 'Cloud Computing',
-      description: 'Migrate to the cloud and scale your infrastructure with confidence. We provide end-to-end cloud solutions.',
-      features: ['Cloud Migration', 'Multi-Cloud Strategy', 'Cloud Security', 'Cost Optimization'],
+      title: 'Education',
+      description: 'Innovative educational solutions that enhance learning experiences and institutional efficiency.',
+      features: ['Learning Management Systems', 'Student Information Systems', 'Virtual Classroom Platforms', 'Educational Mobile Apps'],
+      link: '/services/education'
     },
     {
-      title: 'DevOps',
-      description: 'Streamline development and deployment with modern DevOps practices. Automate your workflows and increase efficiency.',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging'],
+      title: 'Government',
+      description: 'Secure, scalable technology solutions that modernize government operations and citizen services.',
+      features: ['Citizen Service Portals', 'Digital Identity Management', 'Government Analytics', 'Public Safety Systems'],
+      link: '/services/government'
     },
     {
-      title: 'Big Data Technologies',
-      description: 'Transform your data into actionable business intelligence. We help you process, analyze, and visualize large datasets.',
-      features: ['Data Warehousing', 'Real-time Analytics', 'Data Pipeline Design', 'Business Intelligence'],
+      title: 'Healthcare',
+      description: 'Advanced healthcare IT solutions that improve patient care, streamline operations, and ensure regulatory compliance.',
+      features: ['Electronic Health Records', 'Telemedicine Platforms', 'Healthcare Analytics', 'HIPAA Compliance'],
+      link: '/services/healthcare'
     },
     {
-      title: 'Web Development',
-      description: 'Build modern, scalable web applications that engage users and drive business growth.',
-      features: ['Full-Stack Development', 'Progressive Web Apps', 'API Development', 'Performance Optimization'],
+      title: 'Media, Entertainment & Gaming',
+      description: 'Cutting-edge solutions for media companies, entertainment platforms, and gaming studios to deliver exceptional user experiences.',
+      features: ['Content Management Systems', 'Streaming Platforms', 'Game Development', 'Digital Asset Management'],
+      link: '/services/media-entertainment'
     },
     {
-      title: 'IoT Solutions',
-      description: 'Connect your devices and create smart, interconnected systems that improve efficiency and user experience.',
-      features: ['IoT Architecture', 'Device Management', 'Data Integration', 'Security Implementation'],
+      title: 'Technology Enablement',
+      description: 'Empower your organization with the latest technology infrastructure and digital transformation strategies.',
+      features: ['Digital Transformation', 'Cloud Migration', 'System Integration', 'Technology Consulting'],
+      link: '/services/technology-enablement'
+    },
+    {
+      title: 'Strategic Staffing',
+      description: 'Find the right talent for your organization with our comprehensive staffing solutions and talent acquisition services.',
+      features: ['IT Staffing', 'Contract Staffing', 'Permanent Placement', 'Talent Acquisition'],
+      link: '/services/strategic-staffing'
+    },
+    {
+      title: 'Business Process Outsourcing',
+      description: 'Optimize your business operations by outsourcing non-core processes to our experienced team of professionals.',
+      features: ['Process Optimization', 'Cost Reduction', 'Quality Assurance', 'Scalable Solutions'],
+      link: '/services/business-process-outsourcing'
+    },
+    {
+      title: 'Recruitment Process Outsourcing',
+      description: 'Streamline your hiring process with our end-to-end recruitment solutions and talent management services.',
+      features: ['End-to-End Recruitment', 'Candidate Screening', 'Interview Management', 'Onboarding Support'],
+      link: '/services/recruitment-process-outsourcing'
+    },
+    {
+      title: 'PDSA Solutions Training Hub',
+      description: 'Comprehensive training programs and skill development courses to enhance your team\'s technical capabilities.',
+      features: ['Technical Training', 'Certification Programs', 'Skill Development', 'Corporate Training'],
+      link: '/services/training-hub'
     },
   ];
 
@@ -57,11 +88,12 @@ function Service() {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="group relative bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-700 transform hover:-translate-y-4 border border-blue-100/50 hover:border-blue-300/70 backdrop-blur-sm overflow-hidden p-8"
+                to={service.link}
+                className="group relative bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-700 transform hover:-translate-y-4 border border-blue-100/50 hover:border-blue-300/70 backdrop-blur-sm overflow-hidden p-8 block"
               >
                 {/* Glowing border effect */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-400/20 via-indigo-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm"></div>
@@ -80,7 +112,7 @@ function Service() {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

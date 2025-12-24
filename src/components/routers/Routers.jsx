@@ -9,6 +9,28 @@ import About from '../pages/About.jsx';
 import Career from '../pages/Career.jsx';
 import Contact from '../pages/Contact.jsx';
 
+// Service Detail Pages
+import BankingFinancial from '../pages/services/BankingFinancial.jsx';
+import Healthcare from '../pages/services/Healthcare.jsx';
+import Education from '../pages/services/Education.jsx';
+import Government from '../pages/services/Government.jsx';
+import MediaEntertainment from '../pages/services/MediaEntertainment.jsx';
+import TechnologyEnablement from '../pages/services/TechnologyEnablement.jsx';
+import StrategicStaffing from '../pages/services/StrategicStaffing.jsx';
+import BusinessProcessOutsourcing from '../pages/services/BusinessProcessOutsourcing.jsx';
+import RecruitmentProcessOutsourcing from '../pages/services/RecruitmentProcessOutsourcing.jsx';
+import TrainingHub from '../pages/services/TrainingHub.jsx';
+
+// Industry Detail Pages
+import ConsumerIndustrialProducts from '../pages/industries/ConsumerIndustrialProducts.jsx';
+import Energy from '../pages/industries/Energy.jsx';
+import FinancialServices from '../pages/industries/FinancialServices.jsx';
+import IndustryHealthcare from '../pages/industries/Healthcare.jsx';
+import MediaEntertainmentGaming from '../pages/industries/MediaEntertainmentGaming.jsx';
+import IndustryTechnologyEnablement from '../pages/industries/TechnologyEnablement.jsx';
+import Telecommunication from '../pages/industries/Telecommunication.jsx';
+import TransportationTravel from '../pages/industries/TransportationTravel.jsx';
+
 function Routers() {
   return (
     <Routes>
@@ -20,6 +42,28 @@ function Routers() {
       <Route path="/about" element={<About />} />
       <Route path="/career" element={<Career />} />
       <Route path="/contact" element={<Contact />} />
+      
+      {/* Service Detail Routes */}
+      <Route path="/services/banking-financial" element={<BankingFinancial />} />
+      <Route path="/services/healthcare" element={<Healthcare />} />
+      <Route path="/services/education" element={<Education />} />
+      <Route path="/services/government" element={<Government />} />
+      <Route path="/services/media-entertainment" element={<MediaEntertainment />} />
+      <Route path="/services/technology-enablement" element={<TechnologyEnablement />} />
+      <Route path="/services/strategic-staffing" element={<StrategicStaffing />} />
+      <Route path="/services/business-process-outsourcing" element={<BusinessProcessOutsourcing />} />
+      <Route path="/services/recruitment-process-outsourcing" element={<RecruitmentProcessOutsourcing />} />
+      <Route path="/services/training-hub" element={<TrainingHub />} />
+      
+      {/* Industry Detail Routes */}
+      <Route path="/industries/consumer-industrial-products" element={<ConsumerIndustrialProducts />} />
+      <Route path="/industries/energy" element={<Energy />} />
+      <Route path="/industries/financial-services" element={<FinancialServices />} />
+      <Route path="/industries/healthcare" element={<IndustryHealthcare />} />
+      <Route path="/industries/media-entertainment-gaming" element={<MediaEntertainmentGaming />} />
+      <Route path="/industries/technology-enablement" element={<IndustryTechnologyEnablement />} />
+      <Route path="/industries/telecommunication" element={<Telecommunication />} />
+      <Route path="/industries/transportation-travel" element={<TransportationTravel />} />
     </Routes>
   );
 }

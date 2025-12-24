@@ -60,7 +60,7 @@ function HeroSection() {
             </div>
           </div>
 
-          <h1 className="font-[Poppins] text-6xl font-extrabold tracking-tight">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight animate-fade-in-up">
             <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
               Transform your
             </span>
@@ -74,16 +74,19 @@ function HeroSection() {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl mb-12 text-gray-300 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl mb-12 text-gray-300 leading-relaxed max-w-3xl mx-auto animate-fade-in-up-delay">
             We provide comprehensive IT consulting services to help businesses optimize their
             technology infrastructure,
             <span className="text-sky-300 font-semibold"> streamline operations</span>, and achieve digital transformation goals.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-sky-500 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 transform">
+            <a
+              href="/contact"
+              className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-sky-500 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 transform"
+            >
               <span className="relative z-10">Get Started</span>
-            </button>
+            </a>
             <button className="px-8 py-4 border-2 border-white/20 rounded-xl font-semibold text-lg backdrop-blur-sm hover:bg-white/10 hover:border-white/30 transition-all duration-300">
               Learn More
             </button>

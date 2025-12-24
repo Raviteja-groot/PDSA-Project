@@ -61,15 +61,15 @@ function Header() {
                 </svg>
               </Link>
               {activeDropdown === 'services' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
-                  <Link to="/services/healthcare" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Healthcare</Link>
-                  <Link to="/services/banking-financial" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Banking & Financial</Link>
-                  <Link to="/services/media-entertainment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Media & Entertainment</Link>
-                  <Link to="/services/technology-enablement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Technology Enablement</Link>
-                  <Link to="/services/strategic-staffing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Strategic Staffing</Link>
-                  <Link to="/services/business-process-outsourcing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Business Process Outsourcing</Link>
-                  <Link to="/services/recruitment-process-outsourcing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Recruitment Process Outsourcing</Link>
-                  <Link to="/services/training-hub" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Training Hub</Link>
+                <div className="absolute top-full left-0 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
+                  <Link to="/services/healthcare" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Healthcare</Link>
+                  <Link to="/services/banking-financial" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Banking & Financial</Link>
+                  <Link to="/services/media-entertainment" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Media & Entertainment</Link>
+                  <Link to="/services/technology-enablement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Technology Enablement</Link>
+                  <Link to="/services/strategic-staffing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Strategic Staffing</Link>
+                  <Link to="/services/business-process-outsourcing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Business Process Outsourcing</Link>
+                  <Link to="/services/recruitment-process-outsourcing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Recruitment Process Outsourcing</Link>
+                  <Link to="/services/training-hub" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Training Hub</Link>
                 </div>
               )}
             </div>
@@ -90,15 +90,15 @@ function Header() {
                 </svg>
               </Link>
               {activeDropdown === 'industries' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
-                  <Link to="/industries/financial-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Financial Services</Link>
-                  <Link to="/industries/healthcare" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Healthcare</Link>
-                  <Link to="/industries/media-entertainment-gaming" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Media, Entertainment & Gaming</Link>
-                  <Link to="/industries/energy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Energy</Link>
-                  <Link to="/industries/telecommunication" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Telecommunication</Link>
-                  <Link to="/industries/consumer-industrial-products" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Consumer & Industrial Products</Link>
-                  <Link to="/industries/technology-enablement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Technology Enablement</Link>
-                  <Link to="/industries/transportation-travel" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Transportation & Travel</Link>
+                <div className="absolute top-full left-0 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
+                  <Link to="/industries/financial-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Financial Services</Link>
+                  <Link to="/industries/healthcare" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Healthcare</Link>
+                  <Link to="/industries/media-entertainment-gaming" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Media, Entertainment & Gaming</Link>
+                  <Link to="/industries/energy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Energy</Link>
+                  <Link to="/industries/telecommunication" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Telecommunication</Link>
+                  <Link to="/industries/consumer-industrial-products" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Consumer & Industrial Products</Link>
+                  <Link to="/industries/technology-enablement" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Technology Enablement</Link>
+                  <Link to="/industries/transportation-travel" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Transportation & Travel</Link>
                 </div>
               )}
             </div>
@@ -119,20 +119,20 @@ function Header() {
                 </svg>
               </Link>
               {activeDropdown === 'technologies' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 max-h-96 overflow-y-auto">
-                  <Link to="/technologies/ai-machine-learning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">AI & Machine Learning</Link>
-                  <Link to="/technologies/cloud-computing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Cloud Computing</Link>
-                  <Link to="/technologies/devops" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">DevOps</Link>
-                  <Link to="/technologies/big-data" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Big Data Technology</Link>
-                  <Link to="/technologies/web-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Web Development</Link>
-                  <Link to="/technologies/iot" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">IoT</Link>
-                  <Link to="/technologies/android-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Android Development</Link>
-                  <Link to="/technologies/java-python-fullstack" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Java/Python Full Stack</Link>
-                  <Link to="/technologies/servicenow" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">ServiceNow</Link>
-                  <Link to="/technologies/business-data-analyst" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Business/Data Analyst</Link>
-                  <Link to="/technologies/qa-engineer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">QA Engineer</Link>
-                  <Link to="/technologies/data-science" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Data Science</Link>
-                  <Link to="/technologies/salesforce" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Salesforce</Link>
+                <div className="absolute top-full left-0 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 max-h-96 overflow-y-auto">
+                  <Link to="/technologies/ai-machine-learning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">AI & Machine Learning</Link>
+                  <Link to="/technologies/cloud-computing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Cloud Computing</Link>
+                  <Link to="/technologies/devops" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">DevOps</Link>
+                  <Link to="/technologies/big-data" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Big Data Technology</Link>
+                  <Link to="/technologies/web-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Web Development</Link>
+                  <Link to="/technologies/iot" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">IoT</Link>
+                  <Link to="/technologies/android-development" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Android Development</Link>
+                  <Link to="/technologies/java-python-fullstack" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Java/Python Full Stack</Link>
+                  <Link to="/technologies/servicenow" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">ServiceNow</Link>
+                  <Link to="/technologies/business-data-analyst" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Business/Data Analyst</Link>
+                  <Link to="/technologies/qa-engineer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">QA Engineer</Link>
+                  <Link to="/technologies/data-science" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Data Science</Link>
+                  <Link to="/technologies/salesforce" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-200">Salesforce</Link>
                 </div>
               )}
             </div>

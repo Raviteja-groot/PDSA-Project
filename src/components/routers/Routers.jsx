@@ -31,6 +31,21 @@ import IndustryTechnologyEnablement from '../pages/industries/TechnologyEnableme
 import Telecommunication from '../pages/industries/Telecommunication.jsx';
 import TransportationTravel from '../pages/industries/TransportationTravel.jsx';
 
+// Technology Detail Pages
+import AIMachineLearning from '../pages/technologies/AIMachineLearning.jsx';
+import AndroidDevelopment from '../pages/technologies/AndroidDevelopment.jsx';
+import BigData from '../pages/technologies/BigData.jsx';
+import CloudComputing from '../pages/technologies/CloudComputing.jsx';
+import DevOps from '../pages/technologies/DevOps.jsx';
+import IoT from '../pages/technologies/IoT.jsx';
+import WebDevelopment from '../pages/technologies/WebDevelopment.jsx';
+import JavaPythonFullStack from '../pages/technologies/JavaPythonFullStack.jsx';
+import ServiceNow from '../pages/technologies/ServiceNow.jsx';
+import BusinessDataAnalyst from '../pages/technologies/BusinessDataAnalyst.jsx';
+import QAEngineer from '../pages/technologies/QAEngineer.jsx';
+import DataScience from '../pages/technologies/DataScience.jsx';
+import Salesforce from '../pages/technologies/Salesforce.jsx';
+
 function Routers() {
   return (
     <Routes>
@@ -64,6 +79,21 @@ function Routers() {
       <Route path="/industries/technology-enablement" element={<IndustryTechnologyEnablement />} />
       <Route path="/industries/telecommunication" element={<Telecommunication />} />
       <Route path="/industries/transportation-travel" element={<TransportationTravel />} />
+
+      {/* Technology Detail Routes */}
+      <Route path="/technologies/ai-machine-learning" element={<AIMachineLearning />} />
+      <Route path="/technologies/android-development" element={<AndroidDevelopment />} />
+      <Route path="/technologies/big-data" element={<BigData />} />
+      <Route path="/technologies/cloud-computing" element={<CloudComputing />} />
+      <Route path="/technologies/devops" element={<DevOps />} />
+      <Route path="/technologies/iot" element={<IoT />} />
+      <Route path="/technologies/web-development" element={<WebDevelopment />} />
+      <Route path="/technologies/java-python-fullstack" element={<JavaPythonFullStack />} />
+      <Route path="/technologies/servicenow" element={<ServiceNow />} />
+      <Route path="/technologies/business-data-analyst" element={<BusinessDataAnalyst />} />
+      <Route path="/technologies/qa-engineer" element={<QAEngineer />} />
+      <Route path="/technologies/data-science" element={<DataScience />} />
+      <Route path="/technologies/salesforce" element={<Salesforce />} />
     </Routes>
   );
 }

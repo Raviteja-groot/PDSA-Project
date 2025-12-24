@@ -1,8 +1,32 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Education() {
+  const solutions = [
+    {
+      title: 'Learning Management Systems',
+      description: 'Comprehensive LMS platforms that facilitate online learning and course management.',
+      features: ['Course Creation Tools', 'Student Progress Tracking', 'Interactive Content', 'Assessment & Grading']
+    },
+    {
+      title: 'Student Information Systems',
+      description: 'Complete student data management systems for educational institutions.',
+      features: ['Student Records', 'Enrollment Management', 'Academic Transcripts', 'Parent Portals']
+    },
+    {
+      title: 'Virtual Classroom Platforms',
+      description: 'Interactive virtual learning environments for remote and hybrid education.',
+      features: ['Live Video Conferencing', 'Screen Sharing', 'Breakout Rooms', 'Recording Capabilities']
+    },
+    {
+      title: 'Educational Mobile Apps',
+      description: 'Mobile-first educational applications for enhanced learning experiences.',
+      features: ['Offline Learning', 'Push Notifications', 'Gamification', 'Social Learning']
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -11,78 +35,134 @@ function Education() {
             backgroundSize: '60px 60px'
           }}></div>
         </div>
-        <div className="container mx-auto px-6 lg:px-8">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Education Technology</h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
-              Innovative educational solutions that enhance learning experiences and institutional efficiency
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">Education Solutions</h1>
+            <p className="text-xl text-gray-200 mb-8">
+              Innovative educational technology solutions that enhance learning experiences and institutional efficiency
             </p>
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white px-8 py-4 rounded-full hover:from-purple-700 hover:to-indigo-800 transition-all duration-300 inline-block font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              Get Started
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Solutions Grid */}
       <section className="py-20">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-            <div>
-              <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-gray-900 to-purple-700 bg-clip-text text-transparent">
-                Transform Education Through Technology
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Our education technology solutions empower institutions to deliver exceptional learning experiences, 
-                streamline administrative processes, and prepare students for the digital future.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white px-6 py-8 rounded-xl">
-                  <div className="text-3xl font-bold mb-2">500+</div>
-                  <div className="text-sm opacity-90">Educational Institutions</div>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-purple-700 bg-clip-text text-transparent">Our Educational Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Empowering educational institutions with cutting-edge technology for modern learning environments
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-purple-100 hover:border-purple-300 transform hover:-translate-y-2"
+              >
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
+                <p className="text-gray-600 mb-6">{solution.description}</p>
+                <ul className="space-y-3">
+                  {solution.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-700">
+                      <span className="text-purple-500 mr-3">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-slate-800 to-purple-700 bg-clip-text text-transparent">Why Choose Our Education Solutions?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-purple-600">🎓</span>
                 </div>
-                <div className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white px-6 py-8 rounded-xl">
-                  <div className="text-3xl font-bold mb-2">1M+</div>
-                  <div className="text-sm opacity-90">Students Impacted</div>
+                <h3 className="text-xl font-bold mb-2">Enhanced Learning</h3>
+                <p className="text-gray-600">Interactive tools that improve student engagement and outcomes</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-purple-600">📱</span>
                 </div>
+                <h3 className="text-xl font-bold mb-2">Mobile-First Design</h3>
+                <p className="text-gray-600">Accessible learning experiences across all devices and platforms</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-purple-600">📊</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2">Data-Driven Insights</h3>
+                <p className="text-gray-600">Comprehensive analytics to track progress and improve outcomes</p>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-indigo-100 rounded-3xl p-12 shadow-2xl">
-              <h3 className="text-2xl font-bold mb-6 text-gray-800">Education Solutions</h3>
-              <ul className="space-y-4">
-                {[
-                  'Learning Management Systems',
-                  'Student Information Systems',
-                  'Virtual Classroom Platforms',
-                  'Educational Mobile Apps',
-                  'Assessment & Analytics Tools',
-                  'Campus Management Systems'
-                ].map((feature, idx) => (
-                  <li key={idx} className="flex items-center">
-                    <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-indigo-400 rounded-full flex items-center justify-center mr-4">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Showcase */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-purple-700 bg-clip-text text-transparent">Key Features</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: '🎯', title: 'Personalized Learning', desc: 'Adaptive learning paths' },
+                { icon: '👥', title: 'Collaboration Tools', desc: 'Group projects & discussions' },
+                { icon: '📈', title: 'Progress Tracking', desc: 'Real-time analytics' },
+                { icon: '🔒', title: 'Secure Platform', desc: 'FERPA compliant' }
+              ].map((feature, index) => (
+                <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm">{feature.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-indigo-100">
-        <div className="container mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-gray-800">Revolutionize Education Technology</h2>
-          <p className="text-xl mb-8 text-gray-600 max-w-2xl mx-auto">
-            Partner with us to create innovative educational solutions
-          </p>
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white px-10 py-4 rounded-full hover:from-purple-700 hover:to-indigo-800 transition-all duration-300 inline-block font-semibold text-lg shadow-xl transform hover:-translate-y-1"
-          >
-            Start Your Project
-          </a>
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold mb-6">Ready to Transform Education?</h2>
+            <p className="text-xl mb-8 text-gray-200">
+              Contact us today to learn how our solutions can enhance your educational institution
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white px-8 py-4 rounded-full hover:from-purple-700 hover:to-indigo-800 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Get Quote
+              </Link>
+              <Link
+                to="/services"
+                className="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

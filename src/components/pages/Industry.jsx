@@ -14,8 +14,8 @@ function Industry() {
         </div>
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Industries We Serve</h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">Industries We Serve</h1>
+            <p className="text-xl text-gray-200 leading-relaxed animate-fade-in-up-delay">
               Delivering specialized solutions across diverse industries with deep domain expertise
             </p>
           </div>

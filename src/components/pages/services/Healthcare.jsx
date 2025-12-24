@@ -1,8 +1,31 @@
 import React from 'react';
 
 function Healthcare() {
+  const solutions = [
+    {
+      title: 'Electronic Health Records (EHR)',
+      description: 'Comprehensive digital health record systems that improve patient care coordination and clinical workflows.',
+      features: ['Patient Data Management', 'Clinical Decision Support', 'Interoperability', 'Audit Trails']
+    },
+    {
+      title: 'Telemedicine Platforms',
+      description: 'Secure virtual care solutions that enable remote consultations and patient monitoring.',
+      features: ['Video Consultations', 'Remote Monitoring', 'Prescription Management', 'Patient Portals']
+    },
+    {
+      title: 'Healthcare Analytics',
+      description: 'Advanced analytics solutions that provide insights into patient outcomes and operational efficiency.',
+      features: ['Clinical Analytics', 'Population Health', 'Predictive Modeling', 'Performance Dashboards']
+    },
+    {
+      title: 'Medical Imaging Solutions',
+      description: 'State-of-the-art imaging systems and PACS solutions for diagnostic excellence.',
+      features: ['DICOM Integration', 'Image Storage', 'Workflow Automation', 'AI-Powered Diagnostics']
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -15,13 +38,13 @@ function Healthcare() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">Healthcare Solutions</h1>
             <p className="text-xl text-gray-200 leading-relaxed">
-              Advanced healthcare IT solutions that improve patient care and streamline operations
+              Advanced healthcare IT solutions that improve patient care, streamline operations, and ensure regulatory compliance
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Overview Section */}
       <section className="py-20">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
@@ -45,15 +68,15 @@ function Healthcare() {
               </div>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-12 shadow-2xl">
-              <h3 className="text-2xl font-bold mb-6 text-gray-800">Healthcare Solutions</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gray-800">Key Benefits</h3>
               <ul className="space-y-4">
                 {[
-                  'Electronic Health Records (EHR)',
-                  'Telemedicine Platforms',
-                  'Healthcare Analytics',
-                  'Patient Management Systems',
-                  'Medical Imaging Solutions',
-                  'Healthcare Mobile Apps'
+                  'Improved Patient Outcomes',
+                  'Enhanced Care Coordination',
+                  'Operational Efficiency',
+                  'HIPAA Compliance',
+                  'Cost Reduction',
+                  'Data-Driven Insights'
                 ].map((feature, idx) => (
                   <li key={idx} className="flex items-center">
                     <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full flex items-center justify-center mr-4">
@@ -66,6 +89,37 @@ function Healthcare() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Grid */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-blue-700 bg-clip-text text-transparent">
+              Our Healthcare Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive healthcare technology solutions designed to transform patient care
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-gradient-to-br from-white to-blue-50 rounded-2xl p-8 shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h3 className="text-2xl font-bold mb-4 text-gray-800">{solution.title}</h3>
+                <p className="text-gray-600 mb-6">{solution.description}</p>
+                <ul className="space-y-3">
+                  {solution.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-700">
+                      <span className="text-blue-500 mr-3">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>

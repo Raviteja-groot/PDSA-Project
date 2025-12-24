@@ -77,8 +77,8 @@ function Service() {
         </div>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-gray-200">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">Our Services Overview</h1>
+            <p className="text-xl text-gray-200 animate-fade-in-up-delay">
               Comprehensive IT consulting services tailored to your business needs
             </p>
           </div>

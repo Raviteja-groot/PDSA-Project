@@ -52,8 +52,8 @@ function Career() {
         </div>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Join Our Team</h1>
-            <p className="text-xl text-gray-200">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">Join Our Team</h1>
+            <p className="text-xl text-gray-200 animate-fade-in-up-delay">
               Build your career with us. We're always looking for talented individuals to join our growing team.
             </p>
           </div>

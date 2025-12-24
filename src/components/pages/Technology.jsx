@@ -14,8 +14,8 @@ function Technology() {
         </div>
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Technologies</h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">Our Technologies</h1>
+            <p className="text-xl text-gray-200 leading-relaxed animate-fade-in-up-delay">
               Cutting-edge technologies and frameworks powering digital transformation
             </p>
           </div>

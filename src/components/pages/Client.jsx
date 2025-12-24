@@ -48,8 +48,8 @@ function Client() {
         </div>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Clients</h1>
-            <p className="text-xl text-gray-200">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">Our Clients</h1>
+            <p className="text-xl text-gray-200 animate-fade-in-up-delay">
               Trusted by industry leaders worldwide
             </p>
           </div>

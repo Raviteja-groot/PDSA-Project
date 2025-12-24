@@ -74,8 +74,8 @@ function Contact() {
         </div>
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-200">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">Contact Us</h1>
+            <p className="text-xl text-gray-200 animate-fade-in-up-delay">
               Get in touch with our team. We're here to help you transform your business.
             </p>
           </div>

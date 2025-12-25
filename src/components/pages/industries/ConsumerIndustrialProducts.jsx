@@ -12,11 +12,20 @@ function ConsumerIndustrialProducts() {
           }}></div>
         </div>
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Consumer & Industrial Products</h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
-              Manufacturing and consumer product technology solutions for modern enterprises
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">Consumer & Industrial Products</h1>
+              <p className="text-xl text-gray-200 leading-relaxed">
+                Manufacturing and consumer product technology solutions for modern enterprises
+              </p>
+            </div>
+            <div className="flex justify-center lg:justify-end">
+              <img 
+                src="/src/assets/illustrations/consumer&industrail.svg" 
+                alt="Consumer & Industrial Products" 
+                className="w-80 h-80 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
+            </div>
           </div>
         </div>
       </section>

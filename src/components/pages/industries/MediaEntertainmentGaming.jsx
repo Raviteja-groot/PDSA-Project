@@ -11,11 +11,20 @@ function MediaEntertainmentGaming() {
           }}></div>
         </div>
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Media, Entertainment & Gaming</h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
-              Engage audiences with immersive experiences and scalable content delivery platforms
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">Media, Entertainment & Gaming</h1>
+              <p className="text-xl text-gray-200 leading-relaxed">
+                Engage audiences with immersive experiences and scalable content delivery platforms
+              </p>
+            </div>
+            <div className="flex justify-center lg:justify-end">
+              <img 
+                src="/src/assets/illustrations/gaming.svg" 
+                alt="Media Entertainment Gaming" 
+                className="w-80 h-80 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
+            </div>
           </div>
         </div>
       </section>

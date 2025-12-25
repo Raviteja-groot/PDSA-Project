@@ -14,7 +14,7 @@ function Technology() {
         </div>
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">Our Technologies</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">Our Technologies Overview</h1>
             <p className="text-xl text-gray-200 leading-relaxed animate-fade-in-up-delay">
               Cutting-edge technologies and frameworks powering digital transformation
             </p>
@@ -67,30 +67,27 @@ function Technology() {
               {
                 category: 'Frontend Excellence',
                 technologies: ['React', 'Angular', 'Vue.js', 'TypeScript', 'Next.js'],
-                gradient: 'from-blue-600 to-cyan-500',
                 icon: '💎'
               },
               {
                 category: 'Backend Mastery',
                 technologies: ['Node.js', 'Python', 'Java', '.NET', 'Go'],
-                gradient: 'from-purple-600 to-pink-500',
                 icon: '⚙️'
               },
               {
                 category: 'Cloud & DevOps',
                 technologies: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'Terraform'],
-                gradient: 'from-green-600 to-teal-500',
                 icon: '☁️'
               }
             ].map((stack, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <div key={idx} className="bg-white border border-gray-300 rounded-2xl p-8 shadow-lg hover:shadow-blue-500/25 hover:border-blue-400 transition-all duration-300">
                 <div className="text-4xl mb-4 text-center">{stack.icon}</div>
-                <h3 className={`text-2xl font-bold mb-6 text-center bg-gradient-to-r ${stack.gradient} bg-clip-text text-transparent`}>
+                <h3 className="text-2xl font-bold mb-6 text-center text-gray-800">
                   {stack.category}
                 </h3>
                 <div className="space-y-3">
                   {stack.technologies.map((tech, techIdx) => (
-                    <div key={techIdx} className={`bg-gradient-to-r ${stack.gradient} text-white px-4 py-2 rounded-lg text-center font-medium`}>
+                    <div key={techIdx} className="bg-white border border-gray-300 text-gray-800 px-4 py-2 rounded-lg text-center font-medium hover:border-blue-400 hover:shadow-blue-500/20 transition-all duration-300">
                       {tech}
                     </div>
                   ))}
@@ -107,7 +104,6 @@ function Technology() {
                 description: 'Advanced AI solutions with deep learning, neural networks, and predictive analytics',
                 features: ['TensorFlow & PyTorch', 'Computer Vision', 'NLP Processing', 'Predictive Models'],
                 link: '/technologies/ai-machine-learning',
-                gradient: 'from-purple-600 to-blue-600',
                 icon: '🤖'
               },
               {
@@ -115,7 +111,6 @@ function Technology() {
                 description: 'Scalable cloud infrastructure with multi-cloud deployment strategies',
                 features: ['AWS/Azure/GCP', 'Microservices', 'Auto-scaling', 'Load Balancing'],
                 link: '/technologies/cloud-computing',
-                gradient: 'from-blue-600 to-cyan-600',
                 icon: '☁️'
               },
               {
@@ -123,7 +118,6 @@ function Technology() {
                 description: 'Streamlined CI/CD pipelines with automated testing and deployment',
                 features: ['Jenkins/GitLab CI', 'Docker/Kubernetes', 'Infrastructure as Code', 'Monitoring'],
                 link: '/technologies/devops',
-                gradient: 'from-green-600 to-teal-600',
                 icon: '🔄'
               },
               {
@@ -131,7 +125,6 @@ function Technology() {
                 description: 'Large-scale data processing with real-time analytics capabilities',
                 features: ['Apache Spark', 'Hadoop Ecosystem', 'Data Lakes', 'Stream Processing'],
                 link: '/technologies/big-data',
-                gradient: 'from-orange-600 to-red-600',
                 icon: '📊'
               },
               {
@@ -139,7 +132,6 @@ function Technology() {
                 description: 'Modern web applications with responsive design and PWA capabilities',
                 features: ['React/Angular/Vue', 'Progressive Web Apps', 'API Development', 'Performance Optimization'],
                 link: '/technologies/web-development',
-                gradient: 'from-indigo-600 to-purple-600',
                 icon: '🌐'
               },
               {
@@ -147,14 +139,13 @@ function Technology() {
                 description: 'Internet of Things platforms with edge computing and sensor integration',
                 features: ['Edge Computing', 'Sensor Networks', 'Real-time Data', 'Device Management'],
                 link: '/technologies/iot',
-                gradient: 'from-pink-600 to-rose-600',
                 icon: '📡'
               }
             ].map((service, idx) => (
               <Link key={idx} to={service.link} className="group block">
-                <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2 h-full">
+                <div className="bg-white border border-gray-300 rounded-2xl p-8 shadow-lg hover:shadow-blue-500/25 hover:border-blue-400 transition-all duration-300 transform group-hover:-translate-y-2 h-full">
                   <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-800">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
@@ -163,12 +154,12 @@ function Technology() {
                   <div className="space-y-2">
                     {service.features.map((feature, featureIdx) => (
                       <div key={featureIdx} className="flex items-center">
-                        <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full mr-3`}></div>
+                        <div className="w-2 h-2 bg-gray-400 rounded-full mr-3"></div>
                         <span className="text-sm text-gray-700">{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <div className={`mt-6 inline-flex items-center text-sm font-medium bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent group-hover:translate-x-1 transition-transform`}>
+                  <div className="mt-6 inline-flex items-center text-sm font-medium text-gray-800 group-hover:text-blue-600 group-hover:translate-x-1 transition-all">
                     Learn More →
                   </div>
                 </div>

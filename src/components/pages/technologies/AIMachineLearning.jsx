@@ -1,9 +1,19 @@
 import React from 'react';
+import aiBg from '../../../assets/ai-bg.jpg';
 
 function AIMachineLearning() {
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-50">
+          <img 
+            src={aiBg} 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-blue-900/70 to-indigo-900/60"></div>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, #60a5fa 1px, transparent 0)`,
@@ -11,19 +21,12 @@ function AIMachineLearning() {
           }}></div>
         </div>
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
+          <div className="flex justify-center items-center">
+            <div className="text-center relative z-10">
               <h1 className="text-5xl md:text-6xl font-bold mb-6">AI & Machine Learning</h1>
-              <p className="text-xl text-gray-200 leading-relaxed">
+              <p className="text-xl text-gray-200 leading-relaxed max-w-3xl">
                 Leverage the power of artificial intelligence to automate processes and gain actionable insights
               </p>
-            </div>
-            <div className="flex justify-center lg:justify-end">
-              <img 
-                src="/ai & machine learning.jpg" 
-                alt="AI & Machine Learning" 
-                className="w-80 h-80 object-cover rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-300"
-              />
             </div>
           </div>
         </div>

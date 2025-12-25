@@ -1,4 +1,5 @@
 import React from 'react';
+import clientNetworkBg from '../../assets/client-network-bg.jpg';
 
 function Client() {
   const clients = [
@@ -40,6 +41,15 @@ function Client() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-15">
+          <img 
+            src={clientNetworkBg} 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-blue-900/80 to-indigo-900/70"></div>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, #60a5fa 1px, transparent 0)`,

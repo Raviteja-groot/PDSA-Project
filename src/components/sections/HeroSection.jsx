@@ -60,7 +60,7 @@ function HeroSection() {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight animate-fade-in-up">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight animate-fade-in-up mb-8">
             <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
               Transform your
             </span>
@@ -74,7 +74,7 @@ function HeroSection() {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl mb-12 text-gray-300 leading-relaxed max-w-3xl mx-auto animate-fade-in-up-delay">
+          <p className="text-xl md:text-2xl mb-12 text-gray-300 leading-relaxed max-w-3xl mx-auto animate-fade-in-up-delay mt-6">
             We provide comprehensive IT consulting services to help businesses optimize their
             technology infrastructure,
             <span className="text-sky-300 font-semibold"> streamline operations</span>, and achieve digital transformation goals.

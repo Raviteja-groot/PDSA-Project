@@ -1,19 +1,18 @@
 import React from 'react';
-import aiBg from '../../../assets/ai-bg.jpg';
 
 function AIMachineLearning() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+      <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 opacity-50">
+        <div className="absolute inset-0">
           <img 
-            src={aiBg} 
+            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1600&q=80" 
             alt="" 
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-blue-900/70 to-indigo-900/60"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, #60a5fa 1px, transparent 0)`,
@@ -23,8 +22,8 @@ function AIMachineLearning() {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex justify-center items-center">
             <div className="text-center relative z-10">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">AI & Machine Learning</h1>
-              <p className="text-xl text-gray-200 leading-relaxed max-w-3xl">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>AI & Machine Learning</h1>
+              <p className="text-xl text-white leading-relaxed max-w-3xl" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.8)'}}>
                 Leverage the power of artificial intelligence to automate processes and gain actionable insights
               </p>
             </div>

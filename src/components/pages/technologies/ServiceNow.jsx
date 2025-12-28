@@ -40,6 +40,7 @@ function ServiceNow() {
       <PageHeroSection 
         title={technology.name}
         subtitle={technology.introduction}
+        backgroundImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80"
       />
       <main className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-start">

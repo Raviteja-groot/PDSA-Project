@@ -44,14 +44,14 @@ function ServicesSection() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="group p-8 rounded-2xl border border-gray-200 hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 mb-6 text-blue-600">
+            <div key={index} className="group p-8 rounded-2xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer hover:bg-gradient-to-br hover:from-blue-50 hover:to-blue-100 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/40 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300">
+              <div className="w-16 h-16 mb-6 text-blue-600 mx-auto flex items-center justify-center group-hover:scale-125 transition-all duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
                 {service.title}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-center">
                 {service.description}
               </p>
             </div>

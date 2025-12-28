@@ -1,6 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 function AboutSection() {
+  const [counts, setCounts] = useState({ projects: 0, years: 0, clients: 0 });
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const statsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          animateCount('projects', 500, 2000);
+          animateCount('years', 10, 2000);
+          animateCount('clients', 200, 2000);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
+  const animateCount = (key, target, duration) => {
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCounts(prev => ({ ...prev, [key]: target }));
+        clearInterval(timer);
+      } else {
+        setCounts(prev => ({ ...prev, [key]: Math.floor(current) }));
+      }
+    }, 16);
+  };
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6 lg:px-8">
@@ -54,14 +93,14 @@ function AboutSection() {
         {/* Company Overview */}
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">
               Company Overview
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-xl text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white rounded-2xl p-8 shadow-xl text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer hover:bg-gradient-to-br hover:from-blue-50 hover:to-blue-100 group">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -72,8 +111,8 @@ function AboutSection() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-xl text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-400 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white rounded-2xl p-8 shadow-xl text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer hover:bg-gradient-to-br hover:from-blue-50 hover:to-blue-100 group">
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -84,8 +123,8 @@ function AboutSection() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-xl text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-400 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white rounded-2xl p-8 shadow-xl text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer hover:bg-gradient-to-br hover:from-blue-50 hover:to-blue-100 group">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
@@ -97,19 +136,19 @@ function AboutSection() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl p-12 text-white text-center">
+          <div ref={statsRef} className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl p-12 text-white text-center">
             <h3 className="text-3xl font-bold mb-6">Why Choose PDSA Technology?</h3>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
-                <div className="text-4xl font-bold mb-2">500+</div>
+                <div className="text-4xl font-bold mb-2">{counts.projects}+</div>
                 <div className="text-blue-100">Projects Delivered</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">10+</div>
+                <div className="text-4xl font-bold mb-2">{counts.years}+</div>
                 <div className="text-blue-100">Years Experience</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">200+</div>
+                <div className="text-4xl font-bold mb-2">{counts.clients}+</div>
                 <div className="text-blue-100">Happy Clients</div>
               </div>
               <div>

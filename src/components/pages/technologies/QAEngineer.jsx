@@ -42,6 +42,7 @@ function QAEngineer() {
       <PageHeroSection 
         title={role.name}
         subtitle={role.introduction}
+        backgroundImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600&q=80"
       />
       <main className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-start">

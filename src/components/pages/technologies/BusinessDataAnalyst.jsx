@@ -42,6 +42,7 @@ function BusinessDataAnalyst() {
       <PageHeroSection 
         title={role.name}
         subtitle={role.introduction}
+        backgroundImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80"
       />
       <main className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-start">

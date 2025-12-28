@@ -116,26 +116,17 @@ function Client() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50 border-t border-blue-100">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-blue-700 bg-clip-text text-transparent">Become Our Next Success Story</h2>
-              <p className="text-xl mb-8 text-gray-600">
-                Join our growing list of satisfied clients and transform your business with our solutions
-              </p>
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 inline-block font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                Get Started
-              </a>
-            </div>
-            <div className="flex justify-center lg:justify-end">
-              <img 
-                src="/JOIN WITH US.png" 
-                alt="Explore world with us - Join PDSA Technologies" 
-                className="w-full max-w-md h-80 object-cover rounded-2xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-2"
-              />
-            </div>
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-blue-700 bg-clip-text text-transparent">Become Our Next Success Story</h2>
+            <p className="text-xl mb-8 text-gray-600">
+              Join our growing list of satisfied clients and transform your business with our solutions
+            </p>
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 inline-block font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              Get Started
+            </a>
           </div>
         </div>
       </section>

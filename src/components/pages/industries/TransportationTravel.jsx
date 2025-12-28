@@ -4,27 +4,24 @@ function TransportationTravel() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+      <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, #60a5fa 1px, transparent 0)`,
             backgroundSize: '60px 60px'
           }}></div>
         </div>
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">Transportation & Travel</h1>
-              <p className="text-xl text-gray-200 leading-relaxed">
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="flex justify-center items-center">
+            <div className="text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>Transportation & Travel</h1>
+              <p className="text-xl text-white leading-relaxed" style={{textShadow: '1px 1px 4px rgba(0,0,0,0.8)'}}>
                 Smart mobility solutions and travel technology for the modern world
               </p>
-            </div>
-            <div className="flex justify-center lg:justify-end">
-              <img 
-                src="/src/assets/illustrations/transportation&travel.svg" 
-                alt="Transportation & Travel" 
-                className="w-80 h-80 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
-              />
             </div>
           </div>
         </div>

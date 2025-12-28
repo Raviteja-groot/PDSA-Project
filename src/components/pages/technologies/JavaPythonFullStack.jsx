@@ -48,6 +48,7 @@ function JavaPythonFullStack() {
       <PageHeroSection 
         title={technology.name}
         subtitle={technology.introduction}
+        backgroundImage="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1600&q=80"
       />
       <main className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-12">

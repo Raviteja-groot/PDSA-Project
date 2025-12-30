@@ -180,7 +180,6 @@ function Client() {
               </p>
               <div className="text-center">
                 <p className="text-xl font-bold text-gray-900">Industry Leader</p>
-                <p className="text-gray-600">Fortune 500 Company</p>
               </div>
             </div>
           </div>

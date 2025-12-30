@@ -76,6 +76,31 @@ function DevOps() {
         </div>
       </section>
 
+      {/* DevOps Tools & Technologies */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">DevOps Tools & Technologies</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <h3 className="text-lg font-bold mb-3 text-blue-600">CI/CD Tools</h3>
+              <p className="text-gray-600 text-sm">Jenkins, GitLab CI, GitHub Actions, Azure DevOps</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <h3 className="text-lg font-bold mb-3 text-blue-600">Cloud Platforms</h3>
+              <p className="text-gray-600 text-sm">AWS, Azure, Google Cloud, Kubernetes</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <h3 className="text-lg font-bold mb-3 text-blue-600">Monitoring</h3>
+              <p className="text-gray-600 text-sm">Prometheus, Grafana, ELK Stack, Datadog</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <h3 className="text-lg font-bold mb-3 text-blue-600">Infrastructure</h3>
+              <p className="text-gray-600 text-sm">Terraform, Ansible, Docker, Helm</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-6 lg:px-8 text-center">

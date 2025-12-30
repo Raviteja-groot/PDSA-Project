@@ -35,7 +35,8 @@ function CloudComputing() {
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 Migrate to the cloud with confidence using our expertise in leading cloud platforms. 
-                We help you build scalable, secure, and cost-effective cloud solutions.
+                We help you build scalable, secure, and cost-effective cloud solutions that drive innovation 
+                and accelerate your digital transformation journey.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white px-6 py-8 rounded-xl">
@@ -52,11 +53,12 @@ function CloudComputing() {
               <h3 className="text-2xl font-bold mb-6 text-gray-800">Technologies & Tools</h3>
               <ul className="space-y-4">
                 {[
-                  'AWS',
-                  'Azure',
-                  'Google Cloud',
-                  'Kubernetes',
-                  'Docker'
+                  'AWS Cloud Solutions',
+                  'Microsoft Azure Services',
+                  'Google Cloud Platform',
+                  'Kubernetes Orchestration',
+                  'Docker Containerization',
+                  'Serverless Architecture'
                 ].map((feature, idx) => (
                   <li key={idx} className="flex items-center">
                     <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full flex items-center justify-center mr-4">
@@ -68,6 +70,39 @@ function CloudComputing() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+
+          {/* Cloud Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">Cloud Migration</h3>
+              <p className="text-gray-600">Seamless migration of applications and data to cloud platforms with minimal downtime.</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">Security & Compliance</h3>
+              <p className="text-gray-600">Enterprise-grade security with compliance frameworks like SOC 2, HIPAA, and GDPR.</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">Auto Scaling</h3>
+              <p className="text-gray-600">Dynamic resource scaling to handle traffic spikes and optimize costs automatically.</p>
             </div>
           </div>
         </div>

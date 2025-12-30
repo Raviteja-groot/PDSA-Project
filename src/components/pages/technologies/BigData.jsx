@@ -74,6 +74,51 @@ function BigData() {
         </div>
       </section>
 
+      {/* Big Data Use Cases */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">Big Data Use Cases</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Retail Analytics</h3>
+              <p className="text-gray-600 mb-4">Customer behavior analysis, inventory optimization, and personalized recommendations.</p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Real-time inventory tracking</li>
+                <li>• Customer segmentation</li>
+                <li>• Price optimization</li>
+              </ul>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Financial Services</h3>
+              <p className="text-gray-600 mb-4">Risk assessment, fraud detection, and algorithmic trading solutions.</p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Fraud detection algorithms</li>
+                <li>• Credit risk modeling</li>
+                <li>• Market analysis</li>
+              </ul>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Healthcare Analytics</h3>
+              <p className="text-gray-600 mb-4">Patient data analysis, drug discovery, and treatment optimization.</p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Patient outcome prediction</li>
+                <li>• Clinical trial optimization</li>
+                <li>• Medical imaging analysis</li>
+              </ul>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Manufacturing IoT</h3>
+              <p className="text-gray-600 mb-4">Predictive maintenance, quality control, and supply chain optimization.</p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Equipment monitoring</li>
+                <li>• Quality prediction</li>
+                <li>• Supply chain analytics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-6 lg:px-8 text-center">

@@ -74,6 +74,57 @@ function IoT() {
         </div>
       </section>
 
+      {/* IoT Applications */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">IoT Applications Across Industries</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Smart Manufacturing</h3>
+              <p className="text-gray-600 mb-4">Industrial IoT solutions for predictive maintenance and process optimization.</p>
+              <div className="text-sm text-gray-500">
+                • Equipment monitoring • Quality control • Energy management
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Smart Cities</h3>
+              <p className="text-gray-600 mb-4">Urban IoT infrastructure for traffic, utilities, and environmental monitoring.</p>
+              <div className="text-sm text-gray-500">
+                • Traffic management • Smart lighting • Waste management
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Healthcare IoT</h3>
+              <p className="text-gray-600 mb-4">Connected medical devices and remote patient monitoring systems.</p>
+              <div className="text-sm text-gray-500">
+                • Patient monitoring • Asset tracking • Telemedicine
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Agriculture</h3>
+              <p className="text-gray-600 mb-4">Precision farming with soil sensors, weather monitoring, and crop analytics.</p>
+              <div className="text-sm text-gray-500">
+                • Soil monitoring • Irrigation control • Crop analytics
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Retail & Logistics</h3>
+              <p className="text-gray-600 mb-4">Supply chain visibility, inventory tracking, and customer analytics.</p>
+              <div className="text-sm text-gray-500">
+                • Asset tracking • Inventory management • Customer insights
+              </div>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Energy & Utilities</h3>
+              <p className="text-gray-600 mb-4">Smart grid management, renewable energy monitoring, and consumption optimization.</p>
+              <div className="text-sm text-gray-500">
+                • Smart meters • Grid monitoring • Energy optimization
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-6 lg:px-8 text-center">

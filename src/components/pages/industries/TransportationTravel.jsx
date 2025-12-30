@@ -76,6 +76,39 @@ function TransportationTravel() {
         </div>
       </section>
 
+      {/* Industry Solutions */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">Transportation & Travel Solutions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Airlines & Aviation</h3>
+              <p className="text-gray-600">Flight management systems, passenger services, and operational efficiency solutions for airlines.</p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Public Transit</h3>
+              <p className="text-gray-600">Smart ticketing, real-time tracking, and passenger information systems for public transportation.</p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Logistics & Freight</h3>
+              <p className="text-gray-600">Supply chain optimization, cargo tracking, and warehouse management solutions.</p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Hospitality</h3>
+              <p className="text-gray-600">Hotel management systems, booking platforms, and guest experience enhancement tools.</p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Ride Sharing</h3>
+              <p className="text-gray-600">Mobile apps, driver management, and real-time matching algorithms for ride-sharing platforms.</p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Smart Cities</h3>
+              <p className="text-gray-600">Integrated transportation networks, traffic optimization, and urban mobility solutions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-6 lg:px-8 text-center">

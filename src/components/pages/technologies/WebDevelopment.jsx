@@ -74,6 +74,35 @@ function WebDevelopment() {
         </div>
       </section>
 
+      {/* Web Development Process */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">Our Development Process</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+              <h3 className="text-lg font-bold mb-3 text-gray-800">Discovery</h3>
+              <p className="text-gray-600 text-sm">Requirements analysis, user research, and technical planning</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+              <h3 className="text-lg font-bold mb-3 text-gray-800">Design</h3>
+              <p className="text-gray-600 text-sm">UI/UX design, wireframing, and interactive prototypes</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+              <h3 className="text-lg font-bold mb-3 text-gray-800">Development</h3>
+              <p className="text-gray-600 text-sm">Agile development with continuous integration and testing</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
+              <h3 className="text-lg font-bold mb-3 text-gray-800">Launch</h3>
+              <p className="text-gray-600 text-sm">Deployment, monitoring, and ongoing support & maintenance</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-6 lg:px-8 text-center">

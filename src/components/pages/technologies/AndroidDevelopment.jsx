@@ -74,6 +74,55 @@ function AndroidDevelopment() {
         </div>
       </section>
 
+      {/* Android Development Features */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">Advanced Android Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Modern UI/UX</h3>
+              <p className="text-gray-600 mb-4">Jetpack Compose for declarative UI, Material Design 3, and adaptive layouts.</p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Jetpack Compose UI toolkit</li>
+                <li>• Material Design 3 components</li>
+                <li>• Responsive design patterns</li>
+                <li>• Dark mode support</li>
+              </ul>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Performance Optimization</h3>
+              <p className="text-gray-600 mb-4">Advanced techniques for smooth, efficient Android applications.</p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Memory management</li>
+                <li>• Battery optimization</li>
+                <li>• Network efficiency</li>
+                <li>• Background processing</li>
+              </ul>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Security & Privacy</h3>
+              <p className="text-gray-600 mb-4">Enterprise-grade security features and privacy compliance.</p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Biometric authentication</li>
+                <li>• Data encryption</li>
+                <li>• Secure communication</li>
+                <li>• Privacy compliance</li>
+              </ul>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Integration & APIs</h3>
+              <p className="text-gray-600 mb-4">Seamless integration with backend services and third-party APIs.</p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• RESTful API integration</li>
+                <li>• Real-time data sync</li>
+                <li>• Cloud services integration</li>
+                <li>• Payment gateway integration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-6 lg:px-8 text-center">

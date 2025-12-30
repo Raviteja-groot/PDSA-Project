@@ -75,6 +75,27 @@ function TechnologyEnablement() {
         </div>
       </section>
 
+      {/* Key Benefits */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">Why Choose Our Technology Enablement</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Scalable Infrastructure</h3>
+              <p className="text-gray-600">Build robust, scalable technology foundations that grow with your business needs and support future expansion.</p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Expert Guidance</h3>
+              <p className="text-gray-600">Leverage our deep technical expertise to make informed technology decisions and avoid costly mistakes.</p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-600">Rapid Implementation</h3>
+              <p className="text-gray-600">Accelerate your digital transformation with proven methodologies and best practices for faster time-to-market.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="container mx-auto px-6 lg:px-8 text-center">

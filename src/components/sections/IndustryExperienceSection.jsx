@@ -1,4 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
+// Custom hook for typing animation
+const useTypingAnimation = (text, speed = 50) => {
+  const [displayText, setDisplayText] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (isVisible) {
+      let index = 0;
+      const timer = setInterval(() => {
+        if (index < text.length) {
+          setDisplayText(text.slice(0, index + 1));
+          index++;
+        } else {
+          clearInterval(timer);
+        }
+      }, speed);
+      return () => clearInterval(timer);
+    }
+  }, [isVisible, text, speed]);
+
+  return [displayText, elementRef];
+};
 
 const industries = [
   { name: 'Banking & Financial', icon: '🏛️', color: 'from-purple-400 to-purple-600' },
@@ -16,6 +57,9 @@ const industries = [
 ];
 
 function IndustryExperienceSection() {
+  const industryText = "You want a strategic partner to understand your market, but you also need them to understand your industry — Since your company is special, we start with a discovery phase to define your distinct brand attributes and benefits. We assist you in recognising business dynamics, identifying shortages, predicting opportunities, and connecting with customers by providing deep industry insights.";
+  
+  const [typedIndustry, industryRef] = useTypingAnimation(industryText, 12);
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6 lg:px-8">
@@ -23,9 +67,9 @@ function IndustryExperienceSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
             Our Industry Experience
           </h2>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            You want a strategic partner to understand your market, but you also need them to understand your industry — Since your company is special, we start with a discovery phase to define your distinct brand attributes and benefits. We assist you in recognising business dynamics, identifying shortages, predicting opportunities, and connecting with customers by providing deep industry insights.
-          </p>
+          <div ref={industryRef} className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            {typedIndustry}<span className="animate-pulse">|</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

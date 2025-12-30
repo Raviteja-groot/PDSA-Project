@@ -1,9 +1,54 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+// Custom hook for typing animation
+const useTypingAnimation = (text, speed = 50) => {
+  const [displayText, setDisplayText] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (isVisible) {
+      let index = 0;
+      const timer = setInterval(() => {
+        if (index < text.length) {
+          setDisplayText(text.slice(0, index + 1));
+          index++;
+        } else {
+          clearInterval(timer);
+        }
+      }, speed);
+      return () => clearInterval(timer);
+    }
+  }, [isVisible, text, speed]);
+
+  return [displayText, elementRef];
+};
+
 function AboutSection() {
   const [counts, setCounts] = useState({ projects: 0, years: 0, clients: 0 });
   const [hasAnimated, setHasAnimated] = useState(false);
   const statsRef = useRef(null);
+
+  const missionText = "At PDSA Technology, we are committed to delivering cutting-edge software solutions that drive business growth and digital transformation. Our expertise spans across multiple industries, helping organizations leverage technology to achieve their strategic objectives. We believe in the power of innovation, quality, and customer-centric approach to create solutions that not only meet current needs but also prepare businesses for future challenges.";
+  
+  const [typedMission, missionRef] = useTypingAnimation(missionText, 15);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -57,15 +102,9 @@ function AboutSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6 text-gray-800">Our Mission</h3>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                At PDSA Technology, we are committed to delivering cutting-edge software solutions that 
-                drive business growth and digital transformation. Our expertise spans across multiple 
-                industries, helping organizations leverage technology to achieve their strategic objectives.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                We believe in the power of innovation, quality, and customer-centric approach to create 
-                solutions that not only meet current needs but also prepare businesses for future challenges.
-              </p>
+              <div ref={missionRef} className="text-lg text-gray-600 leading-relaxed">
+                {typedMission}<span className="animate-pulse">|</span>
+              </div>
             </div>
             <div className="bg-white rounded-3xl p-8 shadow-2xl">
               <h4 className="text-2xl font-bold mb-6 text-gray-800">Our Expertise</h4>

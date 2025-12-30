@@ -80,9 +80,9 @@ function AboutSection() {
                   'Enterprise Software',
                   'Digital Marketing'
                 ].map((skill, idx) => (
-                  <div key={idx} className="flex items-center">
-                    <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mr-3"></div>
-                    <span className="text-gray-700">{skill}</span>
+                  <div key={idx} className="group flex items-center hover:bg-blue-50 rounded-lg p-2 transition-all duration-300 cursor-pointer">
+                    <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full mr-3 group-hover:scale-125 transition-transform duration-300"></div>
+                    <span className="text-gray-700 group-hover:text-blue-600 transition-colors duration-300 group-hover:font-semibold">{skill}</span>
                   </div>
                 ))}
               </div>

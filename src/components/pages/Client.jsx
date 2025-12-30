@@ -1,39 +1,55 @@
 import React from 'react';
 import clientNetworkBg from '../../assets/client-network-bg.jpg';
+import infosysLogo from '../../assets/logos/infosys.png';
+import walmartLogo from '../../assets/logos/walmart.png';
+import bankOfAmericaLogo from '../../assets/logos/BankofAmerica.png';
+import metaLogo from '../../assets/logos/meta.png';
+import atosLogo from '../../assets/logos/atos.png';
+import humanaLogo from '../../assets/logos/humana.png';
+import capitalOneLogo from '../../assets/logos/capitalone.png';
+import appleLogo from '../../assets/logos/apple.png';
 
 function Client() {
   const clients = [
     {
       name: 'Infosys',
       description: 'Leading global technology services and consulting company.',
+      logo: infosysLogo,
     },
     {
       name: 'Walmart',
       description: 'World\'s largest retailer transforming with technology.',
+      logo: walmartLogo,
     },
     {
       name: 'Bank of America',
       description: 'One of the world\'s largest financial institutions.',
+      logo: bankOfAmericaLogo,
     },
     {
       name: 'Meta',
       description: 'Technology company connecting people worldwide.',
+      logo: metaLogo,
     },
     {
       name: 'ATOS',
       description: 'Global leader in digital transformation.',
+      logo: atosLogo,
     },
     {
       name: 'Humana',
       description: 'Leading health insurance company.',
+      logo: humanaLogo,
     },
     {
       name: 'Capital One',
       description: 'Financial services company focused on digital banking.',
+      logo: capitalOneLogo,
     },
     {
       name: 'Apple',
       description: 'Technology company known for innovation.',
+      logo: appleLogo,
     },
   ];
 
@@ -41,15 +57,6 @@ function Client() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20 relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-15">
-          <img 
-            src={clientNetworkBg} 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-blue-900/80 to-indigo-900/70"></div>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, #60a5fa 1px, transparent 0)`,
@@ -81,8 +88,8 @@ function Client() {
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="w-32 h-32 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
-                    <span className="text-gray-600 font-bold text-lg group-hover:text-blue-600 transition-colors duration-300">{client.name}</span>
+                  <div className="w-32 h-32 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500 p-4">
+                    <img src={client.logo} alt={client.name} className="max-w-full max-h-full object-contain" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{client.name}</h3>
                   <p className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300">{client.description}</p>

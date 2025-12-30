@@ -4,7 +4,7 @@ function WebDevelopment() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
+      <section className="bg-slate-900 text-white h-[65vh] py-16 relative overflow-hidden flex items-center">
         <div className="absolute inset-0">
           <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80" alt="" className="w-full h-full object-cover" />
         </div>

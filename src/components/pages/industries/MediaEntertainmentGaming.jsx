@@ -3,7 +3,7 @@ import React from 'react';
 function MediaEntertainmentGaming() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
+      <section className="bg-slate-900 text-white h-[65vh] py-16 relative overflow-hidden flex items-center">
         <div className="absolute inset-0">
           <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1600&q=80" alt="" className="w-full h-full object-cover" />
         </div>

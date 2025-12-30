@@ -16,12 +16,12 @@ function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900">
-      <div className="absolute left-10 bottom-10 md:left-24 md:bottom-24 w-[260px] md:w-[420px] opacity-60 z-10 pointer-events-none scale-x-[-1]">
+    <section className="relative min-h-[120vh] lg:min-h-[130vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900">
+      <div className="absolute left-4 bottom-8 md:left-16 lg:left-24 md:bottom-16 lg:bottom-20 w-[200px] md:w-[320px] lg:w-[400px] xl:w-[450px] opacity-60 z-10 pointer-events-none scale-x-[-1]">
         <Lottie animationData={heroAnimation} loop autoplay />
       </div>
 
-      <div className="absolute right-10 bottom-10 md:right-24 md:bottom-24 w-[260px] md:w-[420px] opacity-80 z-10 pointer-events-none">
+      <div className="absolute right-4 bottom-8 md:right-16 lg:right-24 md:bottom-16 lg:bottom-20 w-[200px] md:w-[320px] lg:w-[400px] xl:w-[450px] opacity-80 z-10 pointer-events-none">
         <Lottie animationData={heroAnimation} loop autoplay />
       </div>
 
@@ -50,7 +50,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-500/15 via-transparent to-cyan-400/10"></div>
 
-      <div className="relative z-10 container mx-auto px-6 lg:px-8 py-20 text-white">
+      <div className="relative z-10 container mx-auto px-6 lg:px-8 py-24 lg:py-32 text-white">
         <div className="max-w-5xl mx-auto text-center">
           <div className="flex justify-center mb-8">
             <div className="bg-white/10 backdrop-blur-xl rounded-full px-6 py-3 flex items-center space-x-3 border border-white/20 shadow-xl">
@@ -60,7 +60,7 @@ function HeroSection() {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight animate-fade-in-up mb-8">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight animate-fade-in-up mb-8 lg:mb-12">
             <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
               Transform your
             </span>
@@ -74,13 +74,13 @@ function HeroSection() {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl mb-12 text-gray-300 leading-relaxed max-w-3xl mx-auto animate-fade-in-up-delay mt-6">
+          <p className="text-lg md:text-xl lg:text-2xl mb-12 lg:mb-16 text-gray-300 leading-relaxed max-w-4xl mx-auto animate-fade-in-up-delay mt-6 lg:mt-8">
             We provide comprehensive IT consulting services to help businesses optimize their
             technology infrastructure,
             <span className="text-sky-300 font-semibold"> streamline operations</span>, and achieve digital transformation goals.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20 lg:mb-24">
             <a
               href="/contact"
               className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-sky-500 rounded-xl font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 transform"

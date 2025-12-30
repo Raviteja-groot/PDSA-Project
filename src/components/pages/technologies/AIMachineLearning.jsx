@@ -3,7 +3,7 @@ import React from 'react';
 function AIMachineLearning() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
+      <section className="bg-slate-900 text-white h-[65vh] py-16 relative overflow-hidden flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
